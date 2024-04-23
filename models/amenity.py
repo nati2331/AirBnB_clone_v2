@@ -16,4 +16,5 @@ class Amenity(BaseModel, Base):
     name = Column(String(128), nullable=False)
     place_amenities = relationship("Place", secondary=place_amenity)
 
-from models.place import Place
+    def some_method(self):
+        from models.place import Place
